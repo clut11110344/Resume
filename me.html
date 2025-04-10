@@ -116,6 +116,12 @@
       --bg-color: #212529;
       --text-color: #f8f9fa;
       --card-bg: #343a40;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --section-title-color: #0d6efd;
+      --text-muted: #adb5bd;
+      --link-color: #0d6efd;
+      --link-hover-color: #0a58ca;
+      --navbar-bg: rgba(33, 37, 41, 0.95);
     }
 
     [data-theme="dark"] body {
@@ -123,14 +129,39 @@
       color: var(--text-color);
     }
 
+    [data-theme="dark"] .navbar {
+      background-color: var(--navbar-bg);
+    }
+
+    [data-theme="dark"] .navbar-light .navbar-brand,
+    [data-theme="dark"] .navbar-light .nav-link {
+      color: var(--text-color) !important;
+    }
+
     [data-theme="dark"] .overlay {
       background-color: rgba(33, 37, 41, 0.95);
+    }
+
+    [data-theme="dark"] .text-muted {
+      color: var(--text-muted) !important;
+    }
+
+    [data-theme="dark"] .section-title {
+      border-color: var(--section-title-color);
     }
 
     [data-theme="dark"] .card {
       background-color: var(--card-bg);
       color: var(--text-color);
-      border-color: rgba(255,255,255,0.1);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] a {
+      color: var(--link-color);
+    }
+
+    [data-theme="dark"] a:hover {
+      color: var(--link-hover-color);
     }
 
     [data-theme="dark"] .back-to-top {
@@ -142,47 +173,47 @@
       background: rgba(248, 249, 250, 1);
     }
 
-    [data-theme="dark"] .btn-outline-primary {
+    [data-theme="dark"] .social-icons a {
       color: var(--text-color);
-      border-color: var(--text-color);
     }
 
-    .profile-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #0d6efd;
-      margin-bottom: 2rem;
-      transition: transform 0.3s ease;
+    [data-theme="dark"] .social-icons a:hover {
+      color: var(--link-hover-color);
     }
 
-    .profile-image:hover {
-      transform: scale(1.1);
-      cursor: pointer;
+    [data-theme="dark"] .modal-content {
+      background-color: var(--card-bg);
     }
 
-    .card {
-      transition: transform 0.3s ease;
+    [data-theme="dark"] .btn-close {
+      filter: invert(1) grayscale(100%) brightness(200%);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    [data-theme="dark"] .progress {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
+    [data-theme="dark"] .progress-bar {
+      background-color: var(--link-color);
     }
 
-    .badge {
-      font-weight: 500;
+    [data-theme="dark"] .badge {
+      background-color: var(--link-color) !important;
+      color: var(--text-color);
     }
 
-    /* 彈出視窗樣式 */
-    .modal-image {
-      max-width: 100%;
-      height: auto;
+    [data-theme="dark"] .btn-outline-primary {
+      color: var(--link-color);
+      border-color: var(--link-color);
+    }
+
+    [data-theme="dark"] .btn-outline-primary:hover {
+      background-color: var(--link-color);
+      color: var(--bg-color);
+    }
+
+    [data-theme="dark"] .card-title {
+      color: var(--text-color);
     }
   </style>
 </head>
@@ -221,7 +252,7 @@
   <div class="container" id="top" style="margin-top: 80px;">
     <div class="overlay animate__animated animate__fadeIn">
       <div class="text-center mb-5">
-        <img src="Resume/55343.jpg" alt="潘承恩照片" class="profile-image" data-bs-toggle="modal" data-bs-target="#imageModal">
+        <img src="55343.jpg" alt="潘承恩照片" class="profile-image" data-bs-toggle="modal" data-bs-target="#imageModal">
         <h1 class="text-primary">潘承恩</h1>
         <p class="text-muted">致理科技大學 資訊管理學系</p>
       </div>
@@ -447,6 +478,36 @@
         top: 0,
         behavior: 'smooth'
       });
+    });
+
+    // 深色模式切換功能
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const currentTheme = localStorage.getItem('theme');
+    
+    // 檢查本地儲存的主題設定
+    if (currentTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+    } else if (currentTheme === 'light') {
+      document.body.removeAttribute('data-theme');
+      themeToggle.innerHTML = '<i class="bi bi-moon"></i>';
+    } else if (prefersDarkScheme.matches) {
+      document.body.setAttribute('data-theme', 'dark');
+      themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+    }
+    
+    // 切換主題
+    themeToggle.addEventListener('click', () => {
+      if (document.body.hasAttribute('data-theme')) {
+        document.body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="bi bi-moon"></i>';
+      } else {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+      }
     });
   </script>
 </body>
