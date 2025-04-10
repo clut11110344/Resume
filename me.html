@@ -219,6 +219,18 @@
       color: var(--text-color);
     }
 
+    [data-theme="dark"] .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    [data-theme="dark"] .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    [data-theme="dark"] .navbar-toggler:focus {
+      box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+    }
+
     .profile-image {
       max-width: 150px;
       max-height: 150px;
@@ -268,8 +280,8 @@
       </div>
 
       <div class="social-icons text-center mb-4">
-        <a href="#"><i class="bi bi-linkedin"></i></a>
-        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="https://line.me/ti/p/Yj2Rr8Hey5"><i class="bi bi-line"></i></a>
+        <a href="https://github.com/clut11110344"><i class="bi bi-github"></i></a>
         <a href="mailto:clut11110344@gmail.com"><i class="bi bi-envelope-fill"></i></a>
       </div>
 
@@ -338,30 +350,120 @@
         <div class="row g-4">
           <!-- 文書處理 -->
           <div class="col-md-6 mb-3">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="bi bi-file-earmark-text me-2"></i>文書處理
-                </h5>
-                <div class="mt-3">
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Word</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                  </div>
-                  
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Excel</span>
-                    <span>85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                  </div>
-                </div>
-              </div>
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+          <i class="bi bi-file-earmark-text me-2"></i>文書處理
+            </h5>
+            <div class="mt-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>Word</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+          </div>
+          
+          <div class="d-flex justify-content-between mb-1">
+            <span>Excel</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+          </div>
+
+          <div class="d-flex justify-content-between mb-1">
+            <span>PowerPoint</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+          </div>
             </div>
+          </div>
+        </div>
+          </div>
+
+          <!-- 電子商務 -->
+          <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+          <i class="bi bi-cart3 me-2"></i>電子商務
+            </h5>
+            <div class="mt-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>網路行銷</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+          </div>
+          
+          <div class="d-flex justify-content-between mb-1">
+            <span>商務企劃</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+          </div>
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <!-- 程式設計 -->
+          <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+          <i class="bi bi-code-slash me-2"></i>程式設計
+            </h5>
+            <div class="mt-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>HTML/CSS</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+          </div>
+          
+          <div class="d-flex justify-content-between mb-1">
+            <span>C#</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+          </div>
+
+          <div class="d-flex justify-content-between mb-1">
+            <span>Python</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+          </div>
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <!-- 影音編輯 -->
+          <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+          <i class="bi bi-camera-video me-2"></i>影音編輯
+            </h5>
+            <div class="mt-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>威力導演</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+          </div>
+          
+          <div class="d-flex justify-content-between mb-1">
+            <span>Canva</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+          </div>
+            </div>
+          </div>
+        </div>
           </div>
         </div>
       </section>
@@ -372,20 +474,51 @@
           我目前就讀於致理科技大學資訊管理學系四技日間部，預計於 2026 年 6 月畢業。在學期間，我除了專注於資訊管理的專業知識學習，還積極參與課外活動，期望透過實務經驗，將學術知識轉化為職場上的實際技能。
           高中時，我曾擔任治平高中的管樂隊成員，學會與團隊協調合作，也理解耐心與細心是成功關鍵。進入大學後，我擔任班級幹部並於社團法人青年救國團擔任櫃檯人員，從事文書處理、課程報名、電話接聽與平面設計等工作。
           我擅長使用 Canva 設計活動海報，熟悉 ERP 系統，並考取多項專業證照，如乙/丙級電腦軟體應用技術士、EEC 助理規劃師等。在語言方面，我具備 TOEIC 560 分、中等英文能力、基礎韓文能力及台語溝通能力。
-          我相信積極主動的態度、耐心、細心與親和力是服務業核心價值。我期待透過一份兼職工作進一步發揮我的專業與特質，特別是在櫃檯接待或行政助理等領域，並可配合晚班與輪班需求。感謝您抽空閱讀我的自傳，期待有機會與您面談。
+          我相信積極主動的態度、耐心、細心與親和力是服務業核心價值。我期待透過一份兼職工作進一步發揮我的專業與特質，期待有機會與您面談。
         </p>
       </section>
 
       <section id="portfolio" class="section animate__animated animate__fadeInUp">
         <h2 class="section-title">作品集</h2>
+        
+        <h4 class="mt-4 mb-2">Unity於元宇宙之應用簡報</h4>
+        <p class="text-muted mb-3">利用各項圖表分析Unity在元宇宙各項發展。</p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+            src="https://www.canva.com/design/DAGkQlBEO2E/1Gaz67Bj7nK5cqF_2Y2oQw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+          </iframe>
+        </div>
+
+        <h4 class="mt-4 mb-2">智能水壺</h4>
+        <p class="text-muted mb-3">透過發想創新商品，入選2022第8屆C-Star創意創新創客大賽-創新產品與服務組決賽。</p>
         <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
             src="https://www.canva.com/design/DAGkQhMclU0/ikS0BCJeabllzny1eg4shw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
           </iframe>
         </div>
+
+        <h4 class="mt-4 mb-2">商品介紹影片</h4>
+        <p class="text-muted mb-3">利用身邊的手機，製作介紹影片了解商品優勢與消費者痛點，訓練影片編輯技巧與配音旁白。</p>
         <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
           <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-            src="https://www.canva.com/design/DAGkQm5o1SM/FXp-eBOL6cN0rDIeuuQibg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+            src="https://www.youtube.com/embed/wW21z0aBv-E?si=A4MrKvxyvfA1O3f2" allowfullscreen="allowfullscreen" allow="fullscreen">
+          </iframe>
+        </div>
+
+        <h4 class="mt-4 mb-2">自我介紹影片</h4>
+        <p class="text-muted mb-3">透過自我介紹，訓練口條並了解自我。</p>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+            src="https://www.youtube.com/embed/CHV9vAD4OHE?si=P5ucAPF5ag2EOxCu" allowfullscreen="allowfullscreen" allow="fullscreen">
+          </iframe>
+        </div>
+        <div class="embed-responsive" style="height: 800px;">
+          <h4 class="mt-4 mb-2">TBSA 商務企劃能力進階檢定作品-「StoryWave」_音樂+故事分享平台企劃案</h4>
+          <p class="text-muted mb-3">利用我最喜愛的音樂，針對市場進行各項商業分析。</p> 
+          <iframe class="embed-responsive-item" 
+            src="DOC//H11110344_P113102042-潘承恩.pdf" 
+            style="width: 100%; height: 100%; border: none;"
+            allowfullscreen>
           </iframe>
         </div>
       </section>
@@ -471,11 +604,22 @@
       if (document.body.hasAttribute('data-theme')) {
         document.body.removeAttribute('data-theme');
         localStorage.setItem('theme', 'light');
-        themeToggle.innerHTML = '<i class="bi bi-moon"></i>';
+        themeToggle.innerHTML = '<i class="bi bi-moon"></i>'; // 切換為月亮圖示
       } else {
         document.body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="bi bi-sun"></i>'; // 切換為太陽圖示
+      }
+    });
+
+    // 確保主題切換時即時更新圖示
+    prefersDarkScheme.addEventListener('change', (e) => {
+      if (e.matches) {
+        document.body.setAttribute('data-theme', 'dark');
         themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+      } else {
+        document.body.removeAttribute('data-theme');
+        themeToggle.innerHTML = '<i class="bi bi-moon"></i>';
       }
     });
   </script>
